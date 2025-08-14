@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "api/webhook.js": {
+      "runtime": "@vercel/node"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/webhook",
+      "destination": "/api/webhook"
+    }
+  ]
+}

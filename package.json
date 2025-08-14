@@ -1,11 +1,23 @@
 {
-  "name": "github-slack-bot",
+  "name": "slack-webhook-handler",
   "version": "1.0.0",
+  "description": "Slack webhook handler for Vercel",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "dev": "vercel dev"
+    "start": "node server.js",
+    "dev": "node server.js",
+    "vercel:dev": "vercel dev",
+    "deploy": "vercel --prod",
+    "test": "node test-webhook.js"
   },
   "dependencies": {
     "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.6.1"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }

@@ -3,7 +3,9 @@
 import { handleSlackEvent } from "../utils/handleSlackEvent.js";
 
 export default async function handler(req, res) {
-  if (req.method === "POST") {
+  if (req.method === "GET") {
+    return res.status(200).send("Slack events endpoint is live");
+  } else if (req.method === "POST") {
     const { body } = req;
 
     // Handle Slack URL verification
